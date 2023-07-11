@@ -1,0 +1,95 @@
+Compare two JSON without order:
+
+
+var json1 = '{"name": "person1", "age":5}';
+var json2 = '{"age":5 , "name":"person1"}';
+function compareJSON() {
+  var obj1 = JSON.parse(json1);
+  var obj2 = JSON.parse(json2);
+  if(Object.keys(obj1).length !== Object.keys(obj2).length) {
+    return false;
+  }
+  for (var key in obj1) {
+        if(!obj2.hasOwnProperty(key) || obj1[key] !== obj2[key]) {
+    	      return false;
+    	    }
+        }
+  return true;
+} 
+
+const result = compareJSON();
+console.log(result);
+----------------------------------------------------------------------------------------------
+2. use the restcountries API/URL:"https://restcountries.com/v3.1/all" and display all the countries flag in console
+<htmL>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+     
+      var xhr = new XMLHttpRequest();
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          console.log(xhr.responseText);
+var  countriesDetails = JSON.parse(xhr.responseText);
+for var i=0; i<(countriesDetails.length; i++) {
+console.log(countriesDetails[i].flag);
+
+              
+          }
+        } else {
+         
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+    
+      xhr.send();
+    </script>
+  </body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------------------
+3.
+use the same rest countries and print all the countries name, region, subregion, population
+
+<htmL>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+     
+      var xhr = new XMLHttpRequest();
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          console.log(xhr.responseText);
+var  countriesDetails = JSON.parse(xhr.responseText);
+for var i=0; i<(countriesDetails.length; i++) {
+console.log(countriesDetails[i].name.countries name, region, subregion, population);
+
+              
+          }
+        } else {
+         
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+    
+      xhr.send();
+    </script>
+  </body>
+</html
