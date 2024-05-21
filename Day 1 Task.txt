@@ -1,0 +1,21 @@
+1.Write a blog on Difference between HTTP1.1 vs HTTP2
+
+
+----------------------------------------|------------------------------------------------
+          HTTP1.1                       |               HTTP2
+----------------------------------------------------------------------------------------
+                                        |
+      *Information reuse                |   *Concurrent
+      *Request and Response             |   *At the same time working 	
+          at a time one only.           |      many request and response
+      *Limited                          |   *Unlimited
+                                        |
+------------------------------------------------------------------------------------------
+
+
+2.Write a blog about objects and its internal representation in JavaScript
+
+An object can be created with figure brackets {…} with an optional list of properties.
+A property is a “key: value” pair, where a key is a string or a symbol 
+(also called a “property name”), and the value can be anything
+ including numbers, strings, booleans, functions, arrays, or even other objects.
